@@ -12,3 +12,5 @@ These files will replace any personal dotfiles to prevent unexpected behavior.
 - Must show if we are on staging, test or production
 - Must show the current branch we are on, in case of a git repo
 - Aliases to show list of recursive folder -and dirsizes
+- Git information with handy aliases and pretty= formats
+- install/uninstall

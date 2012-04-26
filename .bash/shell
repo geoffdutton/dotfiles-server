@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# General settings
+export EDITOR=vim
+export CLICOLOR=1
+
+# Prefer the Queen's English and use UTF-8.
+export LC_ALL='en_GB.UTF-8';
+export LANG='en_GB';
+
+# don't put duplicate lines in the history
+export HISTCONTROL=ignoredups
+
+# let the history ignore the following commands
+export HISTIGNORE="ls:ll:la:pwd:clear:h:j"
+
+# append to the history file rather than overwriting
+shopt -s histappend
+shopt -s nocaseglob;
