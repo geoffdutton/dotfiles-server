@@ -90,6 +90,7 @@ for sourceFile in .*; do
 	ln -vs "$PWD/$sourceFile" "$targetFile";
 done;
 
+# This will add a tag to our prompt, so we know which environment we're in.
 touch ~/.bash_environment;
 read -p "Please, enter your environment: ";
 echo -e "export __prompt_environment='[$REPLY] '" | tee ~/.bash_environment > /dev/null;
