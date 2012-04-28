@@ -19,6 +19,6 @@ These files will replace any personal dotfiles to prevent unexpected behavior.
 
 Run the following command:
 
-	git clone git@github.ncube.be:wijs/dotfiles-server.git ~/.dotfiles-server && cd ~/.dotfiles-server && ./install.sh
+	git clone git@github.ncube.be:wijs/dotfiles-server.git ~/.dotfiles-server && cd ~/.dotfiles-server && ./install.sh && cd -
 
 Not that you'll be prompted for an environment. This is to easily spot the server we're on.
