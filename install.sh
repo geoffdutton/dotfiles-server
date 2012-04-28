@@ -90,5 +90,9 @@ for sourceFile in .*; do
 	ln -vs "$PWD/$sourceFile" "$targetFile";
 done;
 
+touch ~/.bash_environment;
+read -p "Please, enter your environment: ";
+echo -e "export __prompt_environment='[$REPLY] '" | tee ~/.bash_environment > /dev/null;
+
 echo "Done.";
 

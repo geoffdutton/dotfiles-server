@@ -6,3 +6,4 @@ for file in ~/.bash/{shell,commands,prompt,aliases}; do
 done;
 unset file;
 
+[ -f ~/.bash_environment ] && source ~/.bash_environment;
