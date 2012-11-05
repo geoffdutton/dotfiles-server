@@ -1,4 +1,6 @@
 set encoding=utf-8
+set directory=~/.vim/swp " *.swp files will end up here
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When editing a file, always jump to the last known cursor position.
