@@ -31,43 +31,10 @@ done;
 
 # Show the files that will be overwritten.
 conflictCount=${#commonFiles[@]};
-if [ $conflictCount -gt 0 ]; then
 
-	# Create a suffix with a timestamp so the user can see which
-	# files and when they've been backupped.
-	backupSuffix=".jsVimconfig-$(date +'%Y%m%d-%H%M%S')";
-
-	# Print some information about the replacement.
-	tput setaf 3;
-	printf "Warning: there are some files that will be overwritten.";
-	tput sgr0;
-	echo " Your files will be given the suffix $backupSuffix and will be" \
-			"replaced by symlinks to the Dotfiles:";
-
-	# Print the conflict files.
-	for sourceFile in "${commonFiles[@]}"; do
-		targetFile="$HOME/$sourceFile";
-		echo "Yours: $targetFile";
-		echo "Dotfiles: $sourceFile";
-	done;
-
-	# Make sure the user knows that we'll be replacing the old files.
-	read -p "Would you like to overwrite the current files? (yes|no): ";
-	case "$(tr '[:upper:]' '[:lower:]' <<< "$REPLY")" in
-		'yes'|'y')
-			# The user is sure, continue.
-			;;
-		'no'|'n')
-			# The user isn't sure, abort.
-			echo 'Aborting.';
-			exit 1;
-			;;
-		*)
-			# The user didn't type yes/no.
-			echo 'Invalid answer. Assumed "no". Installation aborted.';
-			exit 1;
-	esac;
-fi;
+# Create a suffix with a timestamp so the user can see which
+# files and when they've been backupped.
+backupSuffix=".jsVimconfig-$(date +'%Y%m%d-%H%M%S')";
 
 # Rename the conflicting files as backup.
 for sourceFile in "${commonFiles[@]}"; do
@@ -79,7 +46,7 @@ done;
 for sourceFile in .*; do
 
 	# Exclude some files.
-	if [[ "$sourceFile" == "dotfiles-002.png" || "$sourceFile" == "dotfiles-001.png" || "$sourceFile" == "install.sh" ]] || [[ "$sourceFile" == "README.md" ]] || [[ "$sourceFile" == "." ]] || [[ "$sourceFile" == ".." ]] || [[ "$sourceFile" == ".git" ]]; then
+	if [[ "$sourceFile" == "install_unattended.sh" || "$sourceFile" == "install.sh" ]] || [[ "$sourceFile" == "README.md" ]] || [[ "$sourceFile" == "." ]] || [[ "$sourceFile" == ".." ]] || [[ "$sourceFile" == ".git" ]]; then
 		continue;
 	fi;
 
@@ -91,9 +58,6 @@ for sourceFile in .*; do
 done;
 
 # This will add a tag to our prompt, so we know which environment we're in.
+# It is adaptable in ~/.bash_environment
 touch ~/.bash_environment;
-read -p "Please, enter your environment: ";
-echo -e "export __prompt_environment='[$REPLY] '" | tee ~/.bash_environment > /dev/null;
-
-echo "Done.";
-
+echo -e "export __prompt_environment='DEVELOPMENT'" | tee ~/.bash_environment > /dev/null;
