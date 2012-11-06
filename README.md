@@ -21,4 +21,4 @@ Run the following command:
 
 	git clone git@github.com:wijs/dotfiles-server.git ~/.dotfiles-server && cd ~/.dotfiles-server && ./install.sh && cd -
 
-Not that you'll be prompted for an environment. This is to easily spot the server we're on.
+You'll be prompted for an environment (for example: staging, production, ..). This is to easily spot the server we're on.
