@@ -2,18 +2,22 @@
 
 ## Goal
 
-Create general dotfiles that can be installed on production and staging servers.
-These files will replace any personal dotfiles to prevent unexpected behavior.
+Create dotfiles that can be installed on production and staging servers.
+Provide a familiar shell which contains commonly used commands as shortcuts. 
 
-## Requirements
+These dotfiles do not override native commands.
 
-- Can not override standard server commands
-- Must have a help command
-- Must show if we are on staging, test or production
-- Must show the current branch we are on, in case of a git repo
-- Aliases to show list of recursive folder -and dirsizes
-- Git information with handy aliases and pretty= formats
-- install/uninstall
+## Features
+
+* Pretty prompt
+	* Displays environment
+	* Displays git branch (if any)
+	* Shorter current working directory (replaces /home/<user> with ~)
+* SSH config autocompletion
+* Git autocompletion
+* Git aliases
+* Aliases
+* Vim config 
 
 ## Installation
 
