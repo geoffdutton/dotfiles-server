@@ -12,7 +12,7 @@ These dotfiles do not override native commands.
 * Pretty prompt
 	* Displays environment
 	* Displays git branch (if any)
-	* Shorter current working directory (replaces /home/<user> with ~)
+	* Shorter current working directory (replaces /home/&lt;user&gt; with ~)
 * SSH config autocompletion
 * Git autocompletion
 * Git aliases
