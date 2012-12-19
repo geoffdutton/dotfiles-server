@@ -60,4 +60,4 @@ done;
 # This will add a tag to our prompt, so we know which environment we're in.
 # It is adaptable in ~/.bash_environment
 touch ~/.bash_environment;
-echo -e "export __prompt_environment='DEVELOPMENT'" | tee ~/.bash_environment > /dev/null;
+echo -e "export __prompt_environment='[DEVELOPMENT] '" | tee ~/.bash_environment > /dev/null;
