@@ -18,11 +18,13 @@ These dotfiles do not override native commands.
 * Git aliases
 * Aliases
 * Vim config
+* tar aliases
+* 
 
 ## Installation
 
 Run the following command:
 
-	git clone git://github.com/wijs/dotfiles-server.git ~/.dotfiles-server && cd ~/.dotfiles-server && ./install.sh && cd -
+	git clone git://github.com/geoffdutton/dotfiles-server.git ~/.dotfiles-server && cd ~/.dotfiles-server && ./install.sh && cd -
 
 You'll be prompted for an environment (for example: staging, production, ..). This is to easily spot the server we're on.
